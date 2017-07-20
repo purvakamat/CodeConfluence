@@ -7,10 +7,8 @@ import { Component } from "@angular/core";
 
 @Component({
     styleUrls: ['./home.component.scss'],
-    templateUrl: './home.component.html',
-    providers:
+    templateUrl: './home.component.html'
 })
 export class HomeComponent {
-    private name: string;
 
 }

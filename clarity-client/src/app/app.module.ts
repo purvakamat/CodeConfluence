@@ -7,13 +7,23 @@ import { ClarityModule } from 'clarity-angular';
 import { AppComponent } from './app.component';
 import { ROUTING } from "./app.routing";
 import { HomeComponent } from "./home/home.component";
-import { AboutComponent } from "./about/about.component";
+import { ProjectprofileComponent } from './projectprofile/projectprofile.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
+import { LoginComponent } from './login/login.component';
+import { SignupComponent } from './signup/signup.component';
+import { UserwizardComponent } from './userwizard/userwizard.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        AboutComponent,
-        HomeComponent
+        HomeComponent,
+        ProjectprofileComponent,
+        ProjectsComponent,
+        UserprofileComponent,
+        LoginComponent,
+        SignupComponent,
+        UserwizardComponent
     ],
     imports: [
         BrowserAnimationsModule,

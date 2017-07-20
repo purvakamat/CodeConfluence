@@ -5,15 +5,22 @@
  */
 import { ModuleWithProviders } from '@angular/core/src/metadata/ng_module';
 import { Routes, RouterModule } from '@angular/router';
-
-import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
+import {UserprofileComponent} from "./userprofile/userprofile.component";
+import {SignupComponent} from "./signup/signup.component";
+import {UserwizardComponent} from "./userwizard/userwizard.component";
+import {ProjectsComponent} from "./projects/projects.component";
+import {ProjectprofileComponent} from "./projectprofile/projectprofile.component";
 
 
 export const ROUTES: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
-    {path: 'about', component: AboutComponent}
+    {path: 'user', component: UserprofileComponent},
+    {path: 'signup', component: SignupComponent},
+    {path: 'createuser', component: UserwizardComponent},
+    {path: 'projects', component: ProjectsComponent},
+    {path: 'myproject', component: ProjectprofileComponent}
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);

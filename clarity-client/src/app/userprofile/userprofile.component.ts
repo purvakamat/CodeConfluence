@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+
+import {Component, OnInit, ViewChild} from '@angular/core';
 
 @Component({
   selector: 'app-userprofile',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./userprofile.component.scss']
 })
 export class UserprofileComponent implements OnInit {
+
 
   constructor() { }
 

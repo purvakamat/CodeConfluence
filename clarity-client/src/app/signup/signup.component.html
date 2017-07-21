@@ -1,3 +1,35 @@
-<p>
-  signup works!
-</p>
+<div class="login-wrapper">
+    <form class="login">
+        <label class="title">
+            VMware&#174; Canvas
+        </label>
+        <h3>Create New Login</h3>
+        <div>
+            <clr-alert *ngIf="show_alert && success" [clrAlertType]="'alert-success'">
+                <div class="alert-item">
+                    <span class="alert-text">
+                        User registered successfully. Return to <a href='#/login'>LOGIN</a>
+                    </span>
+                </div>
+            </clr-alert>
+            <clr-alert *ngIf="show_alert && !success" [clrAlertType]="'alert-danger'">
+                <div class="alert-item">
+                    <span class="alert-text">
+                        {{error_message}}
+                    </span>
+                </div>
+            </clr-alert>
+        </div>
+        <div class="login-group">
+            <input #name class="username" type="text" placeholder="Name" required>
+            <input #email class="username" type="text" placeholder="Email" required>
+            <input #login_username class="username" type="text" placeholder="Username" required>
+            <input #login_password class="password" type="password" placeholder="Password" required>
+
+            <button type="submit" class="btn btn-primary" (click) = "signupClicked(name.value, email.value, login_username.value, login_password.value)">
+                Register
+            </button>
+            <a href="login" class="signup">Already have an account? Log in here.</a>
+        </div>
+    </form>
+</div>

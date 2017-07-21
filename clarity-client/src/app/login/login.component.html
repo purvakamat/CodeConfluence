@@ -1,3 +1,35 @@
-<p>
-  login works!
-</p>
+<div class="login-wrapper">
+    <form class="login">
+        <label class="title">
+            VMware&#174; Canvas
+        </label>
+        <div>
+            <clr-alert *ngIf="!success && show_alert" [clrAlertType]="'alert-danger'">
+                <div class="alert-item">
+                            <span class="alert-text">
+                                {{error_message}}
+                            </span>
+                </div>
+            </clr-alert>
+        </div>
+        <div class="login-group">
+            <div class="auth-source select">
+                <select id="login-auth-source-1">
+                    <option>User</option>
+                    <option>Administrator</option>
+                </select>
+            </div>
+            <input #username class="username" type="text" id="login_username" placeholder="Username">
+            <input #password class="password" type="password" id="login_password" placeholder="Password">
+            <div class="checkbox">
+                <input type="checkbox" id="rememberme">
+                <label for="rememberme">
+                    Remember me
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" (click)="loginClicked(username.value, password.value)">LOG IN</button>
+            <a href="register" class="signup">Sign up for an account</a>
+        </div>
+    </form>
+</div>

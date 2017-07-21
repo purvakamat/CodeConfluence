@@ -11,12 +11,14 @@ import {SignupComponent} from "./signup/signup.component";
 import {UserwizardComponent} from "./userwizard/userwizard.component";
 import {ProjectsComponent} from "./projects/projects.component";
 import {ProjectprofileComponent} from "./projectprofile/projectprofile.component";
+import {LoginComponent} from "./login/login.component";
 
 
 export const ROUTES: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
+    {path: '', redirectTo: 'login', pathMatch: 'full'},
     {path: 'home', component: HomeComponent},
     {path: 'user', component: UserprofileComponent},
+    {path: 'login', component: LoginComponent},
     {path: 'signup', component: SignupComponent},
     {path: 'createuser', component: UserwizardComponent},
     {path: 'projects', component: ProjectsComponent},

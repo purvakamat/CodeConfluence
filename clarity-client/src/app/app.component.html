@@ -9,7 +9,7 @@
     <div class="header-actions">
     </div>
   </clr-header>
-  <nav class="sub-nav" [clr-nav-level]="1">
+  <nav class="sub-nav" [clr-nav-level]="1" *ngIf="showHeader">
     <ul class="nav">
       <li class="nav-item">
         <a class="nav-link" href="#" [routerLink]="['/home']" routerLinkActive="active">Home</a>

@@ -6,8 +6,17 @@
           <span class="title"> Code Confluence </span>
       </a>
     </div>
-    <div class="header-actions">
-    </div>
+      <div class="header-actions">
+          <clr-dropdown clrMenuPosition="bottom-right">
+              <button class="nav-icon" clrDropdownToggle>
+                  <clr-icon shape="cog"></clr-icon>
+                  <clr-icon shape="caret down"></clr-icon>
+              </button>
+              <clr-dropdown-menu>
+                  <a clrDropdownItem (click)="logOut()">Log out</a>
+              </clr-dropdown-menu>
+          </clr-dropdown>
+      </div>
   </clr-header>
   <nav class="sub-nav" [clr-nav-level]="1" *ngIf="showHeader">
     <ul class="nav">
@@ -19,7 +28,7 @@
                 <div align="right"> My Projects </div> </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#" [routerLink]="['/Profile']" routerLinkActive="active">Profile</a>
+            <a class="nav-link" href="#" [routerLink]="['/user']" routerLinkActive="active">My Profile</a>
         </li>
     </ul>
   </nav>

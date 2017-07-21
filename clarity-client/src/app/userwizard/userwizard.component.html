@@ -1,3 +1,180 @@
-<p>
-  userwizard works!
-</p>
+
+<clr-wizard #wizardmd [(clrWizardOpen)]="mdOpen" clrWizardSize="md">
+    <clr-wizard-title>Medium-Sized Wizard</clr-wizard-title>
+
+    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Page 1</ng-template>
+
+    </clr-wizard-page>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Page 2</ng-template>
+
+    </clr-wizard-page>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Page 3</ng-template>
+
+    </clr-wizard-page>
+</clr-wizard>
+
+<clr-wizard #wizardlg [(clrWizardOpen)]="lgOpen" clrWizardSize="lg">
+    <clr-wizard-title>User Profile</clr-wizard-title>
+
+    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Personal Info</ng-template>
+
+        <form #formPageOne="ngForm">
+            <section class="form-block">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <label for="nameInput" aria-haspopup="true" role="tooltip"
+                           [class.invalid]="name.touched && !name.valid"
+                           class="tooltip tooltip-validation tooltip-md tooltip-bottom-right">
+                        <input type="text" id="nameInput" required [(ngModel)]="model.name" name="name" #name="ngModel">
+                        <span class="tooltip-content">This field cannot be empty!</span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" id="Age" [(ngModel)]="model.age" name="Age">
+                </div>
+
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <input type="text" id="Gender" [(ngModel)]="model.gender" name="Gender">
+                </div>
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <input type="text" id="Country" [(ngModel)]="model.country" name="Country">
+                </div>
+
+
+            </section>
+
+        </form>
+    </clr-wizard-page>
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Skills</ng-template>
+        <form #formPageOne="ngForm">
+            <section class="form-block">
+                <div class="form-group">
+                    <label for="expertise">Expertise</label>
+                    <div class="radio">
+                        <input type="radio" name="gridRadios" id="checkrads_9" >
+                        <label for="checkrads_9">Novice</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="gridRadios" id="checkrads_10">
+                        <label for="checkrads_10">Intermediate</label>
+                    </div>
+                    <div class="radio">
+                        <input type="radio" name="gridRadios" id="checkrads_11">
+                        <label for="checkrads_11">Advanced</label>
+                    </div>
+
+
+                </div>
+                <div class="form-group">
+                    <label for="languages">Programming Languages</label>
+                    <div class="checkbox">
+
+                        <input type="checkbox" id="checkrads_1">
+                        <label for="checkrads_1">C</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkrads_2">
+                        <label for="checkrads_2">C++</label>
+                    </div>
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkrads_3">
+                        <label for="checkrads_3">Java</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkrads_4">
+                        <label for="checkrads_4">Python</label>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkrads_5">
+                        <label for="checkrads_5">C#</label>
+                    </div>
+
+
+                </div>
+            </section>
+        </form>
+
+
+
+
+    </clr-wizard-page>
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Areas of Interest</ng-template>
+        <form #formPageOne="ngForm">
+            <section class="form-block">
+                <div class="form-group">
+                    <label for="areasofinterest">Select your fields of interest</label>
+
+
+                    <div class="dropdown open">
+                        <button type="button" class="dropdown-toggle btn btn-primary">
+                              Fields
+                            <clr-icon shape="caret down"></clr-icon>
+                        </button>
+                        <div class="dropdown-menu">
+                            <select multiple size="5">
+                                <option value="Networks">Networks</option>
+                                <option value="Cryptography">Cryptography</option>
+                                <option value="Artificial Intelligence">Artificial Intelligence</option>
+                                <option value="Machine Learning">Machine Learning</option>
+                                <option value="Web Development">Web Development</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </form>
+    </clr-wizard-page>
+
+
+
+</clr-wizard>
+
+<clr-wizard #wizardxl [(clrWizardOpen)]="xlOpen">
+    <clr-wizard-title>XL Wizard (Default)</clr-wizard-title>
+
+    <clr-wizard-button [type]="'cancel'">Cancel</clr-wizard-button>
+    <clr-wizard-button [type]="'previous'">Back</clr-wizard-button>
+    <clr-wizard-button [type]="'next'">Next</clr-wizard-button>
+    <clr-wizard-button [type]="'finish'">Finish</clr-wizard-button>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Page 1</ng-template>
+
+    </clr-wizard-page>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Page 2</ng-template>
+
+    </clr-wizard-page>
+
+    <clr-wizard-page>
+        <ng-template clrPageTitle>Page 3</ng-template>
+
+    </clr-wizard-page>
+</clr-wizard>
+
+
+

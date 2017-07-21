@@ -22,7 +22,7 @@ export const ROUTES: Routes = [
     {path: 'signup', component: SignupComponent},
     {path: 'createuser', component: UserwizardComponent},
     {path: 'projects', component: ProjectsComponent},
-    {path: 'myproject', component: ProjectprofileComponent}
+    {path: 'projectprofile', component: ProjectprofileComponent}
 ];
 
 export const ROUTING: ModuleWithProviders = RouterModule.forRoot(ROUTES);

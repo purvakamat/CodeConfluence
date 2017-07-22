@@ -26,7 +26,7 @@
             <input #login_username class="username" type="text" placeholder="Username" required>
             <input #login_password class="password" type="password" placeholder="Password" required>
 
-            <button type="submit" class="btn btn-primary" (click) = "signupClicked(name.value, email.value, login_username.value, login_password.value)">
+            <button type="submit" class="btn btn-primary" (click)= signupClicked()>
                 Register
             </button>
             <a href="login" class="signup">Already have an account? Log in here.</a>

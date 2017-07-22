@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProjectsComponent implements OnInit {
 
+ project_profile = {
+     name:"",
+     owner: "",
+     image: "",
+     description:"",
+     team: [],
+     max_team_size:5,
+     collaboration_tools:[]
+ }
+
   constructor() { }
 
   ngOnInit() {

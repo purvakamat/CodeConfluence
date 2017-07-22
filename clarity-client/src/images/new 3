@@ -7,11 +7,13 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-12 text-center">
         <span><clr-icon shape="ellipsis-horizontal" size="35"></clr-icon></span>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -21,6 +23,7 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-4">
         <a href="projectprofile" class="card clickable">
@@ -39,6 +42,7 @@
             </div>
         </a>
     </div>
+
     <div class="col-lg-4">
         <a href="projectprofile" class="card clickable">
             <div class="card">
@@ -56,6 +60,7 @@
             </div>
         </a>
     </div>
+
     <div class="col-lg-4">
         <a href="projectprofile" class="card clickable">
             <div class="card">
@@ -74,6 +79,7 @@
         </a>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -83,24 +89,28 @@
         </div>
     </div>
 </div>
-<div class="row">
-    <div class="col-lg-4">
-        <a href="projectprofile" class="card clickable">
-            <div class="card">
-                <div class="card-header">
-                    Automatic Colorization of B&W Images
-                </div>
-                <div class="card-img">
-                    <img src="images/logo.jpg">
-                </div>
-                <div class="card-block">
-                    <div class="card-text">
-                        <b>The Goal:</b>Used Convolutional Neural Networks to color monochromatic images!
+
+
+
+    <div class="row">
+        <div class="col-lg-4">
+            <a href="projectprofile" class="card clickable">
+                <div class="card">
+                    <div class="card-header">
+                        Automatic Colorization of B&W Images
+                    </div>
+                    <div class="card-img">
+                        <img src="images/logo.jpg">
+                    </div>
+                    <div class="card-block">
+                        <div class="card-text">
+                            <b>The Goal:</b>Used Convolutional Neural Networks to color monochromatic images!
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
-    </div>
+            </a>
+        </div>
+
     <div class="col-lg-4">
         <a href="projectprofile" class="card clickable">
             <div class="card">
@@ -115,6 +125,7 @@
             </div>
         </a>
     </div>
+
     <div class="col-lg-4">
         <a href="projectprofile" class="card clickable">
             <div class="card">
@@ -124,12 +135,14 @@
                 <div class="card-block">
                     <div class="card-text">
                         Collaborators: None.
+
                     </div>
                 </div>
             </div>
         </a>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-12">
         <div class="card">
@@ -139,6 +152,7 @@
         </div>
     </div>
 </div>
+
 <div class="row">
     <div class="col-lg-4">
         <a href="projectprofile" class="card clickable">
@@ -157,38 +171,44 @@
             </div>
         </a>
     </div>
-    <div class="col-lg-4">
-        <a href="projectprofile" class="card clickable">
-            <div class="card">
-                <div class="card-header">
-                    Full Stack Engineer
-                </div>
-                <div class="card-img">
-                    <img src="images/Icon.png">
-                </div>
-                <div class="card-block">
-                    <div class="card-text">
-                        <b>The Goal:</b> Build a complete web application using Java as the base programming language.
+
+        <div class="col-lg-4">
+            <a href="projectprofile" class="card clickable">
+                <div class="card">
+                    <div class="card-header">
+                        Full Stack Engineer
+                    </div>
+                    <div class="card-img">
+                        <img src="images/Icon.png">
+                    </div>
+                    <div class="card-block">
+                        <div class="card-text">
+                            <b>The Goal:</b> Build a complete web application using Java as the base programming language.
+                        </div>
                     </div>
                 </div>
-            </div>
-        </a>
-    </div>
-    <div class="col-lg-4">
-        <a href="projectprofile" class="card clickable">
-            <div class="card">
-                <div class="card-header">
-                    A Game Platform
-                </div>
-                <div class="card-img">
-                    <img src="images/java-platform.jpg">
-                </div>
-                <div class="card-block">
-                    <div class="card-text">
-                        <b>The Goal:</b> Build a game to relive your childhood days and get stronger at programming.
+            </a>
+        </div>
+
+
+
+            <div class="col-lg-4">
+                <a href="projectprofile" class="card clickable">
+                    <div class="card">
+                        <div class="card-header">
+                            A Game Platform
+                        </div>
+                        <div class="card-img">
+                            <img src="images/java-platform.jpg">
+                        </div>
+                        <div class="card-block">
+                            <div class="card-text">
+                                <b>The Goal:</b> Build a game to relive your childhood days and get stronger at programming.
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-        </a>
-    </div>
+
+
 </div>

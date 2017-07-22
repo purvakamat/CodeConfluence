@@ -14,43 +14,97 @@
                     <div class="card-media-block">
                         <div class="card-media-description">
                             <span class="card-media-text font-weight-bold">
-                                Owner: John Doe
+                                Owner: VMware
                             </span>
                         </div>
                     </div>
                     <div class="card-text">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi labore explicabo temporibus, enim voluptate saepe corrupti illum earum eveniet ab veniam vel nisi fugit accusantium perferendis quas facilis quod. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi labore explicabo temporibus, enim voluptate saepe corrupti illum earum eveniet ab veniam vel nisi fugit accusantium perferendis quas facilis quod.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt excepturi labore explicabo temporibus, enim voluptate saepe corrupti illum earum eveniet ab veniam vel nisi fugit accusantium perferendis quas facilis quod.
+                        This could be explored to build a great user interface.
+                    </div>
+                    <div class="card-text">
+                        Skills required: Angular , Html, Javascript/Typescript
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <!--<dl class="stack-view">
-            <h4 class="stack-header">
-                <span class="stack-title">Static stack view</span>
-            </h4>
-            <div class="stack-block">
-                <dt class="stack-block-label">Coder1</dt>
-            </div>
-            <div class="stack-block stack-block-expandable">
-                <dt class="stack-block-label">Coder2</dt>
-            </div>
-        </dl>-->
-        <h4 class="stack-header">
-            <span class="stack-title">Team: 3/5</span>
-        </h4>
-        <dl class="stack-view">
-            <div class="stack-block">
-                <dt class="stack-block-label">Coder 1</dt>
-                <dd class="stack-block-content">Html, Javascript, Angular, Node</dd>
-            </div>
-            <div class="stack-block">
-                <dt class="stack-block-label">Coder 2</dt>
-                <dd class="stack-block-content">C#, C++, Python</dd>
-            </div>
-            <div class="stack-block">
-                <dt class="stack-block-label">Coder 3</dt>
-                <dd class="stack-block-content">Python,  Javascript, Web Development, Machine Learning</dd>
-            </div>
-        </dl>
-    </div>
+
+    <h4 class="stack-header">
+        <span class="stack-title">Team: 3/5</span>
+    </h4>
+    <dl class="stack-view">
+        <div class="stack-block">
+            <dt class="stack-block-label">Coder 1</dt>
+            <dd class="stack-block-content">Html, Javascript, Angular, Node</dd>
+        </div>
+        <div class="stack-block">
+            <dt class="stack-block-label">Coder 2</dt>
+            <dd class="stack-block-content">C#, C++, Python</dd>
+        </div>
+        <div class="stack-block">
+            <dt class="stack-block-label">Coder 3</dt>
+            <dd class="stack-block-content">Python,  Javascript, Web Development, Machine Learning</dd>
+        </div>
+    </dl>
+
+    <clr-stack-view>
+        <clr-stack-header>
+            Collaboration tools:
+            <button
+                class="stack-action btn btn-sm btn-link"
+                (click)="editModal = true"
+                type="button">Edit</button>
+        </clr-stack-header>
+
+        <clr-stack-block>
+            <clr-stack-label>Github</clr-stack-label>
+            <clr-stack-content>www.github.com/clarity</clr-stack-content>
+        </clr-stack-block>
+        <clr-stack-block>
+            <clr-stack-label>Slack</clr-stack-label>
+            <clr-stack-content>www.slack.com/clarity_team</clr-stack-content>
+        </clr-stack-block>
+    </clr-stack-view>
+
+    <clr-modal [(clrModalOpen)]="editModal">
+        <h3 class="modal-title">Edit mode</h3>
+        <div class="modal-body">
+            <clr-stack-view>
+                <!--<clr-stack-block>
+                    <clr-stack-label>Github</clr-stack-label>
+                    <clr-stack-content>
+                        <input type="text" [(ngModel)]="www.github.com/clarity" />
+                    </clr-stack-content>
+                </clr-stack-block>
+
+                <clr-stack-block>
+                    <clr-stack-label>Slack</clr-stack-label>
+                    <clr-stack-content>
+                        <input type="text" [(ngModel)]="www.slack.com/clarity_team" />
+                    </clr-stack-content>
+                </clr-stack-block>-->
+
+                <clr-stack-block
+                    *ngFor="let block of blocks; let blockIndex = index"
+                    [clrSbNotifyChange]="block.content!=='Content '+ (blockIndex+1)">
+                    <clr-stack-label>{{block.title}}</clr-stack-label>
+                    <clr-stack-content>
+                        <input type="text" [(ngModel)]="block.content" />
+                    </clr-stack-content>
+
+                    <clr-stack-block
+                        *ngFor="let child of block.children; let blockChildIndex = index"
+                        [clrSbNotifyChange]="child.content!=='Sub-content '+ (blockChildIndex+1)">
+                        <clr-stack-label>{{child.title}}</clr-stack-label>
+                        <clr-stack-content>
+                            <input type="text" [(ngModel)]="child.content" />
+                        </clr-stack-content>
+                    </clr-stack-block>
+                </clr-stack-block>
+            </clr-stack-view>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" (click)="editModal = false">Done</button>
+        </div>
+    </clr-modal>
+</div>
